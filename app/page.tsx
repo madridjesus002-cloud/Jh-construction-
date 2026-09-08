@@ -103,11 +103,11 @@ export default function Home() {
           </p>
         </div>
         <div className="services-grid">
-          {services.map(({ name, detail, icon: Icon, image }, index) => (
+          {services.map(({ name, detail, icon: Icon, image }) => (
             <article className="service-card" key={name}>
-              <img className="service-image" src={image} alt={`${name} service example`} />
-              <span className="service-shade" aria-hidden="true" />
-              <span className="service-number">{String(index + 1).padStart(2, '0')}</span>
+              <div className="service-media">
+                <img className="service-image" src={image} alt={`${name} service example`} />
+              </div>
               <div className="service-copy">
                 <Icon aria-hidden="true" />
                 <h3>{name}</h3>
