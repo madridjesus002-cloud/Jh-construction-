@@ -61,19 +61,27 @@ export default function Home() {
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
-        <img src="/images/hero-3d.jpg" alt="Architectural visualization of premium stone steps, masonry, and a paver entrance" />
+        <div className="hero-slideshow" aria-hidden="true">
+          <img src="/images/project-11.jpg" alt="" />
+          <img src="/images/project-7.jpg" alt="" />
+          <img src="/images/project-10.jpg" alt="" />
+          <img src="/images/project-8.jpg" alt="" />
+          <img src="/images/hero-3d.jpg" alt="" />
+        </div>
         <div className="hero-shade" />
         <div className="hero-content">
           <div className="hero-crown" aria-hidden="true"><Crown /><span>JH</span></div>
+          <span className="hero-proof">Our work · Your next project</span>
           <p className="eyebrow">West Hartford · Licensed &amp; Insured</p>
           <h1 id="hero-title"><span>JH</span> Construction LLC</h1>
           <p className="hero-lead">
             Distinctive concrete, stonework, patios, steps, and year-round property care—built with precision and pride.
           </p>
           <div className="hero-actions">
-            <a className="primary-cta" href={phoneHref}><Phone size={20} /> Call for a Free Estimate</a>
+            <a className="primary-cta hero-call" href={phoneHref}><Phone size={21} /><span><strong>Call Now — Free Estimate</strong><small>Fast response · 7 days a week</small></span></a>
             <a className="text-cta" href="#work">See our work <span aria-hidden="true">→</span></a>
           </div>
+          <div className="slide-dots" aria-hidden="true"><span /><span /><span /><span /><span /></div>
         </div>
       </section>
 
