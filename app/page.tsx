@@ -66,7 +66,6 @@ export default function Home() {
           <img src="/images/project-7.jpg" alt="" />
           <img src="/images/project-10.jpg" alt="" />
           <img src="/images/project-8.jpg" alt="" />
-          <img src="/images/hero-3d.jpg" alt="" />
         </div>
         <div className="hero-shade" />
         <div className="hero-content">
@@ -81,7 +80,7 @@ export default function Home() {
             <a className="primary-cta hero-call" href={phoneHref}><Phone size={21} /><span><strong>Call Now — Free Estimate</strong><small>Fast response · 7 days a week</small></span></a>
             <a className="text-cta" href="#work">See our work <span aria-hidden="true">→</span></a>
           </div>
-          <div className="slide-dots" aria-hidden="true"><span /><span /><span /><span /><span /></div>
+          <div className="slide-dots" aria-hidden="true"><span /><span /><span /><span /></div>
         </div>
       </section>
 
@@ -158,7 +157,7 @@ export default function Home() {
 
       <section className="section about-section" id="about">
         <div className="about-image">
-          <img src="/images/brand-shirt.jpg" alt="JH Construction branded work shirts" />
+          <img src="/images/project-8.jpg" alt="J Hernandez Construction masonry project" />
           <div className="about-badge"><ShieldCheck size={28} /><strong>Licensed<br />&amp; Insured</strong></div>
         </div>
         <div className="about-copy">
