@@ -122,13 +122,17 @@ h1 span { display: block; color: #dfc589; font-size: .78em; font-style: italic; 
 .section-heading h2 em, .about-copy h2 em { color: #9d7a31; font-weight: 500; }
 .dark-eyebrow { color: #7b6028; }
 .split-heading > p { margin: 0; padding-bottom: 7px; color: #5f6670; font-size: 17px; line-height: 1.75; }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #cbc8c1; border-left: 1px solid #cbc8c1; }
-.service-card { min-height: 265px; position: relative; padding: 34px; border-right: 1px solid #cbc8c1; border-bottom: 1px solid #cbc8c1; transition: background .25s ease, transform .25s ease; }
-.service-card:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 18px 38px rgba(13,26,43,.07); z-index: 1; }
-.service-card > svg { width: 31px; height: 31px; color: #a27e35; }
-.service-number { position: absolute; top: 34px; right: 34px; color: #969ba2; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
-.service-card h3 { margin: 34px 0 12px; font-family: Georgia, serif; font-size: 25px; font-weight: 500; }
-.service-card p { margin: 0; color: #69717c; font-size: 14px; line-height: 1.65; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.service-card { min-height: 350px; position: relative; overflow: hidden; background: #0c2340; color: #fff; box-shadow: 0 12px 30px rgba(13,26,43,.12); transition: transform .3s ease, box-shadow .3s ease; isolation: isolate; }
+.service-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(13,26,43,.22); z-index: 1; }
+.service-image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .6s ease; }
+.service-card:hover .service-image { transform: scale(1.06); }
+.service-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(5,18,34,.08) 18%, rgba(5,18,34,.42) 55%, rgba(5,18,34,.97) 100%); }
+.service-number { position: absolute; top: 25px; right: 26px; padding: 7px 9px; border: 1px solid rgba(255,255,255,.48); border-radius: 2px; color: #fff; background: rgba(5,18,34,.22); font-size: 11px; font-weight: 800; letter-spacing: .12em; backdrop-filter: blur(6px); }
+.service-copy { position: absolute; right: 0; bottom: 0; left: 0; padding: 30px; }
+.service-copy > svg { width: 30px; height: 30px; color: #e4c67e; filter: drop-shadow(0 2px 8px rgba(0,0,0,.25)); }
+.service-card h3 { margin: 18px 0 8px; font-family: Georgia, serif; font-size: 28px; font-weight: 500; }
+.service-card p { max-width: 310px; margin: 0; color: rgba(255,255,255,.8); font-size: 14px; line-height: 1.58; }
 
 .work-section { padding: 120px 0; background: #091a2e; color: #fff; }
 .work-inner { width: min(1240px, calc(100% - 48px)); }
@@ -227,7 +231,7 @@ footer > small { grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid #
   .services-section, .about-section { padding: 90px 0; }
   .section-heading { margin-bottom: 38px; }
   .services-grid { grid-template-columns: 1fr; }
-  .service-card { min-height: 220px; }
+  .service-card { min-height: 315px; }
   .work-section { padding: 85px 0; }
   .work-heading { align-items: flex-start; flex-direction: column; }
   .featured-project { height: auto; grid-template-columns: 1fr; }

@@ -13,15 +13,15 @@ import {
 const phoneHref = 'tel:+19595993898';
 
 const services = [
-  { name: 'Concrete', detail: 'Reliable slabs, repairs, foundations, and finished surfaces.', icon: Hammer },
-  { name: 'Steps', detail: 'Safe, durable entry steps built to complement your home.', icon: BrickWall },
-  { name: 'Stone Work', detail: 'Custom stonework with careful lines and lasting strength.', icon: Sparkles },
-  { name: 'Chimneys', detail: 'Masonry chimney repair and restoration for a sound structure.', icon: BrickWall },
-  { name: 'Patios', detail: 'Outdoor gathering spaces designed for everyday living.', icon: Flower2 },
-  { name: 'Sidewalks', detail: 'Clean, level walkways and paths for safer access.', icon: Hammer },
-  { name: 'Tile', detail: 'Precise tile installation for polished, practical surfaces.', icon: Sparkles },
-  { name: 'Snow Services', detail: 'Dependable seasonal snow clearing for your property.', icon: MountainSnow },
-  { name: 'Landscaping', detail: 'Property care that keeps your exterior neat and inviting.', icon: Flower2 },
+  { name: 'Concrete', detail: 'Reliable slabs, repairs, foundations, and finished surfaces.', icon: Hammer, image: '/images/project-1.jpg' },
+  { name: 'Steps', detail: 'Safe, durable entry steps built to complement your home.', icon: BrickWall, image: '/images/project-6.jpg' },
+  { name: 'Stone Work', detail: 'Custom stonework with careful lines and lasting strength.', icon: Sparkles, image: '/images/project-9.jpg' },
+  { name: 'Chimneys', detail: 'Masonry chimney repair and restoration for a sound structure.', icon: BrickWall, image: '/images/service-chimney.jpg' },
+  { name: 'Patios', detail: 'Outdoor gathering spaces designed for everyday living.', icon: Flower2, image: '/images/project-3.jpg' },
+  { name: 'Sidewalks', detail: 'Clean, level walkways and paths for safer access.', icon: Hammer, image: '/images/project-7.jpg' },
+  { name: 'Tile', detail: 'Precise tile installation for polished, practical surfaces.', icon: Sparkles, image: '/images/service-tile.jpg' },
+  { name: 'Snow Services', detail: 'Dependable seasonal snow clearing for your property.', icon: MountainSnow, image: '/images/service-snow.jpg' },
+  { name: 'Landscaping', detail: 'Property care that keeps your exterior neat and inviting.', icon: Flower2, image: '/images/project-10.jpg' },
 ];
 
 function Brand() {
@@ -103,12 +103,16 @@ export default function Home() {
           </p>
         </div>
         <div className="services-grid">
-          {services.map(({ name, detail, icon: Icon }, index) => (
+          {services.map(({ name, detail, icon: Icon, image }, index) => (
             <article className="service-card" key={name}>
+              <img className="service-image" src={image} alt={`${name} service example`} />
+              <span className="service-shade" aria-hidden="true" />
               <span className="service-number">{String(index + 1).padStart(2, '0')}</span>
-              <Icon aria-hidden="true" />
-              <h3>{name}</h3>
-              <p>{detail}</p>
+              <div className="service-copy">
+                <Icon aria-hidden="true" />
+                <h3>{name}</h3>
+                <p>{detail}</p>
+              </div>
             </article>
           ))}
         </div>
