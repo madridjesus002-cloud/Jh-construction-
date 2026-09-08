@@ -61,22 +61,19 @@ export default function Home() {
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
-        <img src="/images/project-6.jpg" alt="Finished stone steps and paver walkway by J Hernandez Construction" />
+        <img src="/images/hero-3d.jpg" alt="Architectural visualization of premium stone steps, masonry, and a paver entrance" />
         <div className="hero-shade" />
         <div className="hero-content">
-          <p className="eyebrow">Craftsmanship built to last</p>
-          <h1 id="hero-title">Your property.<br /><em>Built better.</em></h1>
+          <div className="hero-crown" aria-hidden="true"><Crown /><span>JH</span></div>
+          <p className="eyebrow">West Hartford · Licensed &amp; Insured</p>
+          <h1 id="hero-title"><span>JH</span> Construction LLC</h1>
           <p className="hero-lead">
-            Concrete, stonework, patios, steps, and year-round property care from a local West Hartford team.
+            Distinctive concrete, stonework, patios, steps, and year-round property care—built with precision and pride.
           </p>
           <div className="hero-actions">
             <a className="primary-cta" href={phoneHref}><Phone size={20} /> Call for a Free Estimate</a>
             <a className="text-cta" href="#work">See our work <span aria-hidden="true">→</span></a>
           </div>
-        </div>
-        <div className="hero-note">
-          <strong>Local expertise</strong>
-          <span>Construction · Masonry · Property Care</span>
         </div>
       </section>
 
