@@ -1,6 +1,5 @@
 import {
   BrickWall,
-  Crown,
   Flower2,
   Hammer,
   MapPin,
@@ -27,10 +26,7 @@ const services = [
 function Brand() {
   return (
     <a href="#top" className="brand" aria-label="J Hernandez Construction home">
-      <span className="brand-mark" aria-hidden="true">
-        <Crown size={17} strokeWidth={2.4} />
-        <strong>JH</strong>
-      </span>
+      <img className="brand-logo" src="/images/jh-logo.png" alt="" />
       <span className="brand-copy">
         <strong>J Hernandez</strong>
         <small>Construction LLC</small>
@@ -69,10 +65,9 @@ export default function Home() {
         </div>
         <div className="hero-shade" />
         <div className="hero-content">
-          <div className="hero-crown" aria-hidden="true"><Crown /><span>JH</span></div>
-          <span className="hero-proof">Our work · Your next project</span>
+          <div className="hero-logo" aria-hidden="true"><img src="/images/jh-logo.png" alt="" /></div>
           <p className="eyebrow">West Hartford · Licensed &amp; Insured</p>
-          <h1 id="hero-title"><span>JH</span> Construction LLC</h1>
+          <h1 id="hero-title">JH Construction LLC</h1>
           <p className="hero-lead">
             Distinctive concrete, stonework, patios, steps, and year-round property care—built with precision and pride.
           </p>
@@ -176,7 +171,7 @@ export default function Home() {
       </section>
 
       <section className="contact-section" id="contact">
-        <div className="contact-mark" aria-hidden="true"><Crown /><strong>JH</strong></div>
+        <div className="contact-mark" aria-hidden="true"><img src="/images/jh-logo.png" alt="" /></div>
         <p className="eyebrow">Let’s build something lasting</p>
         <h2>Ready to improve<br />your property?</h2>
         <p>Call J Hernandez Construction LLC to talk about your project and request a free estimate.</p>
