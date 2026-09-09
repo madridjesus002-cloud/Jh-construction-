@@ -65,9 +65,13 @@ export default function Home() {
         </div>
         <div className="hero-shade" />
         <div className="hero-content">
-          <div className="hero-logo" aria-hidden="true"><img src="/images/jh-logo.png" alt="" /></div>
           <p className="eyebrow">West Hartford · Licensed &amp; Insured</p>
-          <h1 id="hero-title">JH Construction LLC</h1>
+          <div className="hero-wordmark">
+            <img src="/images/jh-logo.png" alt="" aria-hidden="true" />
+            <h1 id="hero-title" aria-label="JH Construction LLC">
+              <span>Construction</span><small>LLC</small>
+            </h1>
+          </div>
           <p className="hero-lead">
             Distinctive concrete, stonework, patios, steps, and year-round property care—built with precision and pride.
           </p>
