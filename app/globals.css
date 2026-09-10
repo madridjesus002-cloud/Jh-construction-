@@ -117,6 +117,7 @@ nav a:hover, nav a:focus-visible { border-color: #d6b878; }
 .dark-eyebrow { color: #7b6028; }
 .split-heading > p { margin: 0; padding-bottom: 7px; color: #5f6670; font-size: 17px; line-height: 1.75; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.service-card:last-child { grid-column: 2; }
 .service-card { overflow: hidden; background: #fff; border: 1px solid #d9d6cf; color: #142238; transition: transform .25s ease, box-shadow .25s ease; }
 .service-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(13,26,43,.12); }
 .service-media { height: 185px; overflow: hidden; background: #e8e5df; }
@@ -196,6 +197,7 @@ footer > small { grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid #
   .split-heading, .about-section { grid-template-columns: 1fr; }
   .split-heading { gap: 28px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card:last-child { grid-column: auto; }
   .comparison-grid { grid-template-columns: 1fr; }
   .comparison-card:last-child { grid-column: auto; }
   .comparison-card:last-child .comparison-photos figure { height: 360px; }

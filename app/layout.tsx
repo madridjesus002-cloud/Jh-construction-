@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://jh-construction.vercel.app'),
   title: 'J Hernandez Construction LLC | West Hartford, CT',
   description:
-    'Licensed and insured construction, concrete, stonework, patios, steps, sidewalks, tile, snow, and landscaping services in West Hartford, Connecticut.',
+    'Licensed and insured construction, concrete, stonework, patios, steps, tree removal, snow, and landscaping services in West Hartford, Connecticut.',
   openGraph: {
     title: 'J Hernandez Construction LLC',
     description: 'Built better in West Hartford. Licensed and insured construction and property services.',

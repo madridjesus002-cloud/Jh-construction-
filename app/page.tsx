@@ -7,6 +7,7 @@ import {
   Phone,
   ShieldCheck,
   Sparkles,
+  TreePine,
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -22,6 +23,7 @@ const services = [
   { name: 'Tile', detail: 'Precise tile installation for polished, practical surfaces.', icon: Sparkles, image: '/images/service-tile.jpg' },
   { name: 'Snow Services', detail: 'Dependable seasonal snow clearing for your property.', icon: MountainSnow, image: '/images/service-snow.jpg' },
   { name: 'Landscaping', detail: 'Property care that keeps your exterior neat and inviting.', icon: Flower2, image: '/images/project-10.jpg' },
+  { name: 'Tree Removal', detail: 'Careful tree removal and cleanup to help protect and open up your property.', icon: TreePine, image: '/images/service-tree-removal.jpg' },
 ];
 
 const beforeAfterProjects = [
@@ -250,7 +252,7 @@ export default function Home() {
 
       <footer>
         <Brand />
-        <p>Concrete · Steps · Stone Work · Chimneys · Patios · Sidewalks · Tile · Snow · Landscaping</p>
+        <p>Concrete · Steps · Stone Work · Chimneys · Patios · Sidewalks · Tile · Snow · Landscaping · Tree Removal</p>
         <div className="footer-contact">
           <a href={phoneHref}>959-599-3898</a>
           <a href="mailto:jorge.hdz90@icloud.com">jorge.hdz90@icloud.com</a>
