@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://j-hernandez-construction.madridjesus002.chatgpt.site'),
+  metadataBase: new URL('https://jh-construction.vercel.app'),
   title: 'J Hernandez Construction LLC | West Hartford, CT',
   description:
     'Licensed and insured construction, concrete, stonework, patios, steps, sidewalks, tile, snow, and landscaping services in West Hartford, Connecticut.',

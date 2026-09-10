@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Sparkles,
 } from 'lucide-react';
+import Image from 'next/image';
 
 const phoneHref = 'tel:+19595993898';
 
@@ -21,6 +22,56 @@ const services = [
   { name: 'Tile', detail: 'Precise tile installation for polished, practical surfaces.', icon: Sparkles, image: '/images/service-tile.jpg' },
   { name: 'Snow Services', detail: 'Dependable seasonal snow clearing for your property.', icon: MountainSnow, image: '/images/service-snow.jpg' },
   { name: 'Landscaping', detail: 'Property care that keeps your exterior neat and inviting.', icon: Flower2, image: '/images/project-10.jpg' },
+];
+
+const beforeAfterProjects = [
+  {
+    title: 'Natural Stone Patio',
+    detail: 'From compacted base preparation to a clean, level outdoor living area.',
+    before: '/images/patio-before.jpg',
+    after: '/images/patio-after.jpg',
+    beforeAlt: 'Prepared gravel base before natural stone patio installation',
+    afterAlt: 'Completed natural stone patio installation',
+    orientation: 'landscape',
+    afterPosition: 'center 58%',
+  },
+  {
+    title: 'Custom Fire Feature',
+    detail: 'Hand-set stone, river-rock detail, and fitted caps create a polished centerpiece.',
+    before: '/images/fire-feature-before.jpg',
+    after: '/images/fire-feature-after.jpg',
+    beforeAlt: 'Outdoor stone fire feature during construction',
+    afterAlt: 'Completed outdoor stone fire feature and patio',
+    orientation: 'landscape',
+  },
+  {
+    title: 'Curved Paver Walkway',
+    detail: 'An aging path replaced with a wider, smooth-flowing paver walkway.',
+    before: '/images/curved-walkway-before.jpg',
+    after: '/images/curved-walkway-after.jpg',
+    beforeAlt: 'Aging curved walkway before replacement',
+    afterAlt: 'New curved paver walkway installation',
+    orientation: 'portrait',
+    afterPosition: 'center 38%',
+  },
+  {
+    title: 'Bluestone Walkway',
+    detail: 'A weathered path renewed with aligned bluestone and crisp, even joints.',
+    before: '/images/bluestone-walkway-before.jpg',
+    after: '/images/bluestone-walkway-after.jpg',
+    beforeAlt: 'Weathered bluestone walkway before restoration',
+    afterAlt: 'Renewed bluestone walkway with aligned stone',
+    orientation: 'portrait',
+  },
+  {
+    title: 'Front Porch & Stonework',
+    detail: 'A complete porch rebuild finished with stone veneer, new steps, and a paver approach.',
+    before: '/images/porch-before.jpg',
+    after: '/images/porch-after.jpg',
+    beforeAlt: 'Front porch during structural rebuilding',
+    afterAlt: 'Finished front porch with stone veneer, steps, and paver walkway',
+    orientation: 'landscape',
+  },
 ];
 
 function Brand() {
@@ -58,10 +109,10 @@ export default function Home() {
 
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-slideshow" aria-hidden="true">
-          <img src="/images/project-11.jpg" alt="" />
-          <img src="/images/project-7.jpg" alt="" />
-          <img src="/images/project-10.jpg" alt="" />
-          <img src="/images/project-8.jpg" alt="" />
+          <Image src="/images/porch-after.jpg" alt="" fill sizes="100vw" priority />
+          <Image src="/images/fire-feature-after.jpg" alt="" fill sizes="100vw" />
+          <Image src="/images/patio-after.jpg" alt="" fill sizes="100vw" />
+          <Image src="/images/project-9.jpg" alt="" fill sizes="100vw" />
         </div>
         <div className="hero-shade" />
         <div className="hero-content">
@@ -126,30 +177,39 @@ export default function Home() {
             <a className="outline-cta" href={phoneHref}><Phone size={18} /> Start your project</a>
           </div>
 
-          <div className="featured-project">
-            <figure className="before-image">
-              <img src="/images/project-1.jpg" alt="Patio before restoration" />
-              <figcaption>Before</figcaption>
-            </figure>
-            <figure className="after-image">
-              <img src="/images/project-3.jpg" alt="Restored stone patio in progress" />
-              <figcaption>Renewed stone patio</figcaption>
-            </figure>
-          </div>
-
-          <div className="project-grid">
-            <figure>
-              <img src="/images/project-6.jpg" alt="Finished stone entry steps and paver walkway" />
-              <figcaption><strong>Stone entry &amp; steps</strong><span>Built for a welcoming arrival</span></figcaption>
-            </figure>
-            <figure>
-              <img src="/images/project-7.jpg" alt="Curved paver walkway installation" />
-              <figcaption><strong>Custom paver walkway</strong><span>Detailed curves and clean edging</span></figcaption>
-            </figure>
-            <figure>
-              <img src="/images/project-9.jpg" alt="Finished paver walkway and stone entry steps" />
-              <figcaption><strong>Walkway &amp; stone steps</strong><span>A complete front-entry transformation</span></figcaption>
-            </figure>
+          <div className="comparison-grid">
+            {beforeAfterProjects.map((project) => (
+              <article className={`comparison-card ${project.orientation}`} key={project.title}>
+                <div className="comparison-heading">
+                  <div>
+                    <span>Project transformation</span>
+                    <h3>{project.title}</h3>
+                  </div>
+                  <p>{project.detail}</p>
+                </div>
+                <div className="comparison-photos">
+                  <figure>
+                    <Image
+                      src={project.before}
+                      alt={project.beforeAlt}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 25vw"
+                    />
+                    <figcaption>Before</figcaption>
+                  </figure>
+                  <figure>
+                    <Image
+                      src={project.after}
+                      alt={project.afterAlt}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 25vw"
+                      style={{ objectPosition: project.afterPosition ?? 'center' }}
+                    />
+                    <figcaption>After</figcaption>
+                  </figure>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
